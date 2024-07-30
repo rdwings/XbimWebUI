@@ -48,3 +48,17 @@ Please use [GitHub issues](https://github.com/xBimTeam/XbimWebUI/issues) to ask 
 ## Getting Involved
 
 If you'd like to get involved and contribute to this project, please contact [Martin Cerny](https://www.linkedin.com/in/martin-cerny/) or the Project Coordinator([Steve Lockley](https://www.linkedin.com/in/prof-stephen-lockley-a1984614/)).
+
+
+## Change mad by Wings
+
+comment the code that made the viewer hide certain part of model from camera.
+In order to build a package for us, run the follow code:
+
+```
+npm install
+npm run build
+cd dist
+npm pack
+```
+And then copy the generated tgz to your project.
