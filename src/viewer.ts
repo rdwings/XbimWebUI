@@ -2361,11 +2361,12 @@ export class Viewer {
                 if (this.activeHandles.length > 0) {
 
                     // this will minimize z-fighting when zoomed far away from the model with thin layers
-                    var { near, far, size } = this.getCameraDistanceFromRegion();
-                    if (near > 0 && far > 0) {
-                        this.cameraProperties.near = near;
-                        this.cameraProperties.far = far;
-                    } 
+                    // comment it because it hide some part of model from camera
+                    // var { near, far, size } = this.getCameraDistanceFromRegion();
+                    // if (near > 0 && far > 0) {
+                    //     this.cameraProperties.near = near;
+                    //     this.cameraProperties.far = far;
+                    // } 
                     this.draw();
                 }
                 this._requestAnimationFrame(tick);
@@ -2376,9 +2377,10 @@ export class Viewer {
             if (isMoving === false)
             {
                 isMoving = true;
-                var { near, far, size } = this.getCameraDistanceFromRegion();
-                this.cameraProperties.near = this.meter * 0.2;
-                this.cameraProperties.far = size * 5;
+                // comment it because it hide some part of model from camera
+                // var { near, far, size } = this.getCameraDistanceFromRegion();
+                // this.cameraProperties.near = this.meter * 0.2;
+                // this.cameraProperties.far = size * 5;
                 this.fire('navigationStart', true);
             }
             if (fps < 10 && this.performance > PerformanceRating.VERY_LOW) {
